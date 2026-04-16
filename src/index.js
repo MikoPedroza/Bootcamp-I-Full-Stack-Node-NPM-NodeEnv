@@ -31,6 +31,7 @@ const envfile = `.env.${process.env.NODE_ENV}`;
 
 dotenv.config({path: envfile}); // if the path in config is not set, it will read in .env by default
 console.log(process.env.TEST_VARIABLE);
+console.log(process.env.DATABASE_URL);
 
 /* moving apps to configuration file */
 const app = express();
