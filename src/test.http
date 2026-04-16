@@ -1,0 +1,11 @@
+// GET http://localhost:3001
+GET http://localhost:3001/nodejs/?order=asc
+
+POST http://localhost:3001
+
+GET http://localhost:3001/users/admin
+GET http://localhost:3001/tasks/
+GET http://localhost:3001/post
+GET http://localhost:3001/posts
+GET http://localhost:3001/tagchuchu
+GET http://localhost:3001/bigfly

@@ -1,0 +1,9 @@
+GET http://localhost:3001/tasks
+
+GET http://localhost:3001/tasksNOTexist
+
+GET http://localhost:3001/tasks?limit=10&page=1&order=asc
+
+GET http://localhost:3001/tasks?limit=apex&page=1&order=asc
+
+GET http://localhost:3001/tasks?limit=2&page=2&order=asc

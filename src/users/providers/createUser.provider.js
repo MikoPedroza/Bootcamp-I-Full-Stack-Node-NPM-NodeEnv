@@ -1,0 +1,61 @@
+const User = require("../user.schema.js");
+const { matchedData } = require("express-validator");
+const { StatusCodes } = require("http-status-codes");
+const errorLogger = require("../../helpers/errorLogger.helper.js");
+const bcrypt = require("bcrypt");
+const getUserByEmail = require("./getUserByEmail.provider.js");
+
+
+async function createUserProvider( req, res ) {
+    const validatedUser = matchedData(req);
+    console.log("validatedUseremail: ", validatedUser.email);
+
+    try{
+        // const existingUser = await User.findOne({ email: validatedUser.email });
+        // const existingUser = getUserByEmail(validatedData.email);
+        const existingUser = await getUserByEmail(validatedUser.email);
+        
+        if (existingUser) {
+            return res.status(StatusCodes.BAD_REQUEST).json({
+                message: "Email already exists",
+            });
+        }
+
+        const salt = await bcrypt.genSalt();
+        const hashedPassword = await bcrypt.hash(validatedUser.password, salt);
+
+        const user = new User({
+            firstName: validatedUser.firstName,
+            lastName: validatedUser.lastName,
+            email: validatedUser.email,
+            // password: validatedUser.password,
+            password: hashedPassword,
+        });
+
+        await user.save();
+        // delete user.password; // To not return the password to the user
+        // return res.status(StatusCodes.CREATED).json(user);
+        return res.status(StatusCodes.CREATED).json({
+            _id: user._id,
+            firstName: user.firstName,
+            lastname: user.lastName,
+            email: user.email,
+        });
+    } catch (error) {
+        errorLogger("Error creating a new user: ", req, error);
+        return res.status(StatusCodes.GATEWAY_TIMEOUT).json({
+            reason: "Unable to process your request at the moment, please try later.",
+        });
+    }
+
+    // const user = new User({
+    //     firstName: req.body.firstName,
+    //     lastName: req.body.lastName,
+    //     email: req.body.email,
+    //     password: req.body.password,
+    // });
+
+    // return await user.save();
+}
+
+module.exports = createUserProvider;

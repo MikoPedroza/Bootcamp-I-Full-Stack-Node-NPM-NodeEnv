@@ -1,0 +1,34 @@
+PATCH http://localhost:3001/tasks
+Content-Type: application/json
+
+{
+    "title" : "Title of the task",
+    "date" : "2026-02-04T10:30:00Z",
+    "description" : "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.",
+    "priority" : "normal",
+    "status" : "Todo"
+}
+
+PATCH http://localhost:3001/tasks
+Content-Type: application/json
+
+{
+    "_id" : "69a1c583fcdfd5cbc62c0ff8",
+    "title" : "Title of the task3 - updated oomf",
+    "dueDate" : "2026-02-04T10:30:00Z",
+    "description" : "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.",
+    "priority" : "normal",
+    "status" : "Todo"
+}
+
+PATCH http://localhost:3001/tasks
+Content-Type: application/json
+
+{
+    "_id" : "69a1c583fcdfd5cbc62c0ff8",
+    "title" : "Title of the task3 - updated aamdh",
+    "dueDate" : "2026-02-04T10:30:00Z",
+    "description" : "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.",
+    "priority" : "normal",
+    "status" : "Todo"
+}

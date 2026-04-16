@@ -1,0 +1,97 @@
+POST http://localhost:3001/tasks
+Content-Type: application/json
+
+{
+    "title" : "Title of the task",
+    "date" : "2026-02-04T10:30:00Z",
+    "description" : "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.",
+    "priority" : "normal",
+    "status" : "todo"
+}
+
+POST http://localhost:3001/tasks
+Content-Type: application/json
+
+{
+    "title" : "Task3",
+    "dueDate" : "2026-02-04T10:30:00Z",
+    "description" : "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.",
+    "priority" : "normal",
+    "status" : "Todo"
+}
+
+POST http://localhost:3001/tasks
+Content-Type: application/json
+
+{
+    "title" : "Task4",
+    "dueDate" : "2026-02-04T10:30:00Z",
+    "description" : "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.",
+    "priority" : "normal",
+    "status" : "Todos"
+}
+
+POST http://localhost:3001/tasks
+Content-Type: application/json
+
+{
+    "title" : "Task6",
+    "dueDate" : "2026-02-04T10:30:00Z",
+    "description" : "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.",
+    "priority" : "normal",
+    "status" : "Todo",
+    "extra" : "extra"
+}
+
+POST http://localhost:3001/tasks
+Content-Type: application/json
+
+{
+    "title" : "Task - with user 1",
+    "dueDate" : "2026-02-04T10:30:00Z",
+    "description" : "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.",
+    "priority" : "normal",
+    "status" : "Todo",
+    "extra" : "extra",
+    "user" : "699ea02e5734c046e2569b55"
+}
+
+POST http://localhost:3001/tasks
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWE4NmQwMGRmMDBiM2NiODQ4MDE0OGIiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE3NzI3MzI3NTUsImV4cCI6MTc3MjgxOTE1NX0.bnshQg7tjOOIdq6vHBAI20j-X3s18ZCUhpPLCUPCCrU
+
+{
+    "title" : "Task - with user 1",
+    "dueDate" : "2026-02-04T10:30:00Z",
+    "description" : "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.",
+    "priority" : "normal",
+    "status" : "Todo",
+    "extra" : "extra",
+    "user" : "699ea02e5734c046e2569b55"
+}
+
+POST http://localhost:3001/tasks
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWE4NmQwMGRmMDBiM2NiODQ4MDE0OGIiLCJlbWFpbCI6ImpvaG5kb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE3NzI3MzI3NTUsImV4cCI6MTc3MjgxOTE1NX0.bnshQg7tjOOIdq6vHBAI20j-X3s18ZCUhpPLCUPCCrU
+
+{
+    "title" : "Task - with user vallidated",
+    "dueDate" : "2026-02-04T10:30:00Z",
+    "description" : "Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.",
+    "priority" : "normal",
+    "status" : "Todo",
+    "extra" : "extra"
+}
+
+POST http://localhost:3001/tasks
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWM2Mzk3ZTgwM2JhNTliNWM3NjA1ZWMiLCJlbWFpbCI6Im1hcmtkb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE3NzQ2MTg4MTAsImV4cCI6MTc3NDcwNTIxMH0.WJYhRZ7PXpAKhFmt_iFwhQ24tmLMJkBm2Bp01wbF4R0
+
+{
+    "title" : "Second Task",
+    "dueDate" : "2026-03-30T16:00:00.000Z",
+    "description" : "Second Task test.",
+    "priority" : "normal",
+    "status" : "inProgress",
+    "extra" : "extra"
+}
